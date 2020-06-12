@@ -33,7 +33,7 @@
         service.getBlogItems = function () {
             var response = $http({
                 method: "GET",
-                url: (ApiBasePath + "/blog_quotes_api.json")
+                templateUrl: "json/blog_quotes_api.json"
             });
 
             return response;
