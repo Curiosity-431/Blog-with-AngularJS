@@ -33,7 +33,7 @@
         service.getBlogItems = function () {
             var response = $http({
                 method: "GET",
-                templateUrl: "json/blog_quotes_api.json"
+                url: "https://github.com/Curiosity-431/Blog-with-AngularJS/blob/master/json/blog_quotes_api.json"
             });
 
             return response;
