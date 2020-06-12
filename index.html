@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="BlogApp">
 
 <head>
     <meta charset="UTF-8" />
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body>
+<body ng-controller="BlogAppController as blog">
 
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
@@ -115,6 +115,12 @@
 
 
     </div>
+
+        <ul>
+        <li ng-repeat="quote in blog.quotes">
+          {{ quote.qsentence }}
+        </li>
+      </ul>
 
 
 
