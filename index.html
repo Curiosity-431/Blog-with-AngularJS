@@ -111,16 +111,15 @@
 
 
 
-        </div>
+        </div><br><br><br><br>
 
 
     </div>
 
-        <ul>
-        <li ng-repeat="quote in blog.quotes">
-          {{ quote.qsentence }}
-        </li>
-      </ul>
+
+    <div ng-repeat="quote in blog.quotes" class="shadow-lg p-3 mb-5 bg-white rounded border border-primary container">
+        <center>{{ quote.qsentence }}</center>
+    </div>
 
 
 
