@@ -4,8 +4,8 @@
     angular.module('BlogApp', [])
         .controller('BlogAppController', BlogAppController)
         .service('BlogGetService', BlogGetService);
-        //.constant('ApiBasePath', "https://github.com/Curiosity-431/Blog-Api/blob/master");
-       // .directive('BlogItems', BlogItemsDirective);
+    //.constant('ApiBasePath', "https://github.com/Curiosity-431/Blog-Api/blob/master");
+    // .directive('BlogItems', BlogItemsDirective);
 
 
     BlogAppController.$inject = ['BlogGetService'];
@@ -22,8 +22,17 @@
                 console.log("Something went terribly wrong.");
             });
 
+        var promise1 = BlogGetService.getPlaceholderItems();
 
+        promise1.then(function (response) {
+                blog.place = response.data;
+            })
+            .catch(function (error) {
+                console.log("Something went terribly wrong.");
+            });
     }
+
+
 
     BlogGetService.$inject = ['$http'];
 
@@ -34,6 +43,15 @@
             var response = $http({
                 method: "GET",
                 url: "json/blog_quotes_api.json"
+            });
+
+            return response;
+        };
+
+        service.getPlaceholderItems = function () {
+            var response = $http({
+                method: "GET",
+                url: "json/json_placeholder_api.json"
             });
 
             return response;
