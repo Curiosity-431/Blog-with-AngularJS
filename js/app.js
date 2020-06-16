@@ -3,8 +3,8 @@
 
     angular.module('BlogApp', [])
         .controller('BlogAppController', BlogAppController)
-        .service('BlogGetService', BlogGetService)
-        .constant('ApiBasePath', "https://github.com/Curiosity-431/Blog-Api/blob/master");
+        .service('BlogGetService', BlogGetService);
+        //.constant('ApiBasePath', "https://github.com/Curiosity-431/Blog-Api/blob/master");
        // .directive('BlogItems', BlogItemsDirective);
 
 
@@ -25,9 +25,9 @@
 
     }
 
-    BlogGetService.$inject = ['$http', 'ApiBasePath'];
+    BlogGetService.$inject = ['$http'];
 
-    function BlogGetService($http, ApiBasePath) {
+    function BlogGetService($http) {
         var service = this;
 
         service.getBlogItems = function () {
