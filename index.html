@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Angular Blog</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -121,28 +122,33 @@
     </div>
 
 
-    <div ng-repeat="quote in blog.quotes"
+    <div data-aos="flip-right" ng-repeat="quote in blog.quotes"
         class="shadow-lg p-3 mb-5 bg-white rounded border border-primary container quote">
         <center>{{ quote.qsentence }}</center>
     </div><br><br>
 
 
     <div class="container text-center">
-        <figure ng-repeat="quote in blog.quotes" class="figure p-3">
+        <figure data-aos="zoom-in-up" ng-repeat="quote in blog.quotes" class="figure p-3">
             <img src="img/doctor.png" width="285" height="280" class="figure-img img-fluid rounded" alt="...">
             <figcaption class="figure-caption">{{ quote.author }}</figcaption>
         </figure>
     </div><br><br><br>
 
     <div class="container text-center">
-        <figure ng-repeat="img in blog.place" class="figure p-3">
+        <figure data-aos="zoom-out-down" ng-repeat="img in blog.place" class="figure p-3">
             <img src="{{img.url}}" width="285" height="280" class="figure-img img-fluid rounded" alt="...">
-            <figcaption class="figure-caption">{{ img.id }}</figcaption>
+            <figcaption class="figure-caption">{{ img.id }}</figcaption><br>
+            <a href="#" class="btn btn-primary">Open</a>
         </figure>
     </div>
 
     <script src="js/angular.min.js"></script>
+    <script src="js/aos.js"></script>
     <script src="js/app.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
