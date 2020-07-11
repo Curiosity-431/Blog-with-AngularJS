@@ -14,5 +14,5 @@
     "background_color": "#ffffff",
     "display": "standalone",
     "description": "A blog app",
-    "start_url": "."
+    "start_url": "https://curiosity-431.github.io/Blog-with-AngularJS/"
 }
