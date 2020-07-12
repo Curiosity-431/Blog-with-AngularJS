@@ -15,5 +15,5 @@
     "display": "standalone",
     "description": "A blog app",
     "scope": "/",
-    "start_url": "/"
+    "start_url": "index"
 }
