@@ -14,5 +14,6 @@
     "background_color": "#ffffff",
     "display": "standalone",
     "description": "A blog app",
-    "start_url": "."
+    "scope": "/",
+    "start_url": "/"
 }
