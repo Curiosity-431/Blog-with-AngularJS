@@ -15,5 +15,5 @@
     "display": "standalone",
     "description": "A blog app",
     "scope": "/",
-    "start_url": "index"
+    "start_url": "https://curiosity-431.github.io/Blog-with-AngularJS"
 }
